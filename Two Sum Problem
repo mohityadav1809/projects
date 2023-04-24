@@ -1,0 +1,46 @@
+//Brute Force Approach(O(N2))
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        int[] result = new int[2];
+            for(int i = 0; i < nums.length-1; i++){
+                int sum =0;
+                 for(int j = i+1; j < nums.length; j++){
+                        sum = nums[j] + nums[i];
+                        if(sum == target){
+                          result[1] = j;
+                          result[0] = i;
+                        }
+            }
+        }
+        return result;
+    }
+}
+
+
+
+//Set failed approach
+Why failed:
+Becouse here we need to track index also, So 
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        Set<Integer> numset = new HashSet<Integer>();
+        int[] result = new int[2];
+            for(int i = 0; i < nums.length; i++){
+                if(numset.size() == 0 || !numset.contains(target-nums[i])){
+                    numset.add(nums[i]);
+                }
+                else{
+                //We can apply loop but that will make it O(N2) TC
+                     result[0] = i; 
+                     result[1]= ;
+                     return result;
+                }
+
+            }       
+        return result;
+    }
+}
+
+//Optimised approach: USING MAP(O(N))
+Key Number value index 
+Becouse number is unique in the question
