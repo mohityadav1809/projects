@@ -18,21 +18,21 @@ class Solution {
 
 
 
-//Set failed approach
+//Set failed approach --  2,7,3,5    target- 5
 Why failed:
 Becouse here we need to track index also, So 
 class Solution {
     public int[] twoSum(int[] nums, int target) {
-        Set<Integer> numset = new HashSet<Integer>();
+        List<Integer> arrlist = new ArrayList<Integer>();
         int[] result = new int[2];
             for(int i = 0; i < nums.length; i++){
-                if(numset.size() == 0 || !numset.contains(target-nums[i])){
-                    numset.add(nums[i]);
+                if(arrlist.size() == 0 || !arrlist.contains(target-nums[i])){
+                    arrlist.add(nums[i]);
                 }
                 else{
                 //We can apply loop but that will make it O(N2) TC
-                     result[0] = i; 
-                     result[1]= ;
+                     result[0] = arrlist.indexOf(target-nums[i]); 
+                     result[1]= i;
                      return result;
                 }
 
@@ -42,5 +42,6 @@ class Solution {
 }
 
 //Optimised approach: USING MAP(O(N))
-Key Number value index 
+Key Number 
+value index 
 Becouse number is unique in the question
