@@ -1,7 +1,12 @@
 https://leetcode.com/problems/remove-nth-node-from-end-of-list/solutions/1164542/js-python-java-c-easy-two-pointer-solution-w-explanation/?orderBy=hot&languageTags=java
+BFS :
+Traversing through the ll and finding its size then again traversing and finding the specified position based on totalsize - reqpst + 1 and then going at that node and making its
+previous node point to next node.
+::Multiple O(n) loop we need to have
 
 
 
+Best Approach O(n)
 2 ptr approach
 /**
  * Definition for singly-linked list.
@@ -28,3 +33,5 @@ fast = fast.next;
         return head;
     }
 }
+
+
