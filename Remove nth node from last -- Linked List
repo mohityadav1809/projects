@@ -35,3 +35,5 @@ fast = fast.next;
 }
 
 
+1pointer 2 iteration,
+Take length by iteration then move 2nd iterator till length - desirednode + 1
